@@ -143,7 +143,7 @@ public class marshaller {
 		int testintUnmarsh2 = unmarshInt(testintMarsh,2);
 		int testintUnmarsh3 = unmarshInt(testintMarsh,3);
 
-		
+
 		System.out.println("Original test int: "+ testint );
 		System.out.println("Marshalled test int byteArray: "+ testintMarsh );
 		System.out.println("Marshalled test int byteArray size: "+ testintMarsh.length );
@@ -174,8 +174,26 @@ public class marshaller {
 		StringBuilder teststringUnmarsh3 = unmarshString(teststringMarsh,3);
 		System.out.println("Unmarshalled teststring with 3 offset: "+ teststringUnmarsh3 );
 
-		
+		String pathtest = "C:\\Users\\User\\OneDrive\\NTU\\Y4S2\\CZ4013 - Distributed Systems";
 
+		byte[] pathtestMarsh = marshString(pathtest);
+		
+		StringBuilder pathtestUnmarsh = unmarshString(pathtestMarsh,0);
+		
+		System.out.println("Original pathtest: "+ pathtest );
+		System.out.println("Marshalled pathtest: "+ pathtestMarsh );
+		System.out.println("Marshalled pathtest size: "+ pathtestMarsh.length );
+
+		System.out.println("Unmarshalled pathtest with 0 offset: "+ pathtestUnmarsh );
+		
+		StringBuilder pathtestUnmarsh1 = unmarshString(pathtestMarsh,1);
+		System.out.println("Unmarshalled pathtest with 1 offset: "+ pathtestUnmarsh1 );
+
+		StringBuilder pathtestUnmarsh2 = unmarshString(pathtestMarsh,2);
+		System.out.println("Unmarshalled pathtest with 2 offset: "+ pathtestUnmarsh2 );
+
+		StringBuilder pathtestUnmarsh3 = unmarshString(pathtestMarsh,3);
+		System.out.println("Unmarshalled pathtest with 3 offset: "+ pathtestUnmarsh3 );
 	}
 
 }
